@@ -1,0 +1,220 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+  .modal .modal-content {
+    border-radius: 22px;
+    max-width: 800px;
+    position: relative;
+    background-color: #fefefe;
+    margin: 30vh auto;
+    padding: 20px 20px 70px 20px;
+    border: 1px solid #888;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+    @media (max-width: 415px) {
+      .modal .modal-content {
+        padding: 20px 8px 70px 8px; } }
+    .modal .modal-content h2 {
+      font-size: 1.875rem;
+      line-height: 35px;
+      color: #545454; }
+    .modal .modal-content p {
+      font-size: 1rem;
+      line-height: 19px;
+      color: #000000;
+      padding: 20px 0 48px 0; }
+    .modal .modal-content input {
+      width: 100%;
+      height: 32px;
+      border: none;
+      border-bottom: 1px solid #bababa; }
+    .modal .modal-content input:active {
+      border: none; }
+    .modal .modal-content input::placeholder {
+      font-size: 0.87rem;
+      line-height: 16px;
+      color: #828282; }
+    .modal .modal-content .btn-group {
+      position: absolute;
+      right: 20px;
+      bottom: 22px; }
+      .modal .modal-content .btn-group .add {
+        color: #609FFF;
+        border: none;
+        background-color: inherit; }
+      .modal .modal-content .btn-group .Cancel {
+        color: #828282;
+        border: none;
+        background-color: inherit; }
+
+body {
+  font-family: "Roboto", 'Segoe UI', Tahoma, sans-serif;
+  background: url(../library/pic/main-bg.jpg); }
+  body .navbar {
+    background-color: #609FFF;
+    height: 91px;
+    border-radius: 0px 0px 25px 25px; }
+    body .navbar .heading {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 31px 0 32px 20px; }
+  body main {
+    margin-bottom: 100px; }
+    body main .content {
+      max-width: 1125px;
+      margin: auto;
+      background-color: #ffffff;
+      margin-top: 61px;
+      padding: 49px 44px 69px 50px;
+      border-radius: 27px;
+      box-shadow: 0px 4px 23px rgba(85, 123, 221, 0.08); }
+      @media (max-width: 605px) {
+        body main .content {
+          padding: 49px 10px 69px 10px; } }
+      body main .content nav {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        margin-bottom: 32px; }
+        @media (max-width: 475px) {
+          body main .content nav {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; } }
+        body main .content nav .Present {
+          display: grid;
+          grid-column-gap: 5px;
+          grid-template-rows: 40px / 40px;
+          grid-template-columns: 50px / 50px; }
+          body main .content nav .Present .day-time {
+            display: grid;
+            grid-row: 1 / 3;
+            font-size: 2.75rem;
+            line-height: 52px; }
+          body main .content nav .Present .month-time {
+            display: grid;
+            margin-top: 7px;
+            grid-row: 1 / 2;
+            font-size: 1rem;
+            line-height: 19px; }
+          body main .content nav .Present .year-time {
+            display: grid;
+            grid-row: 2 / 3;
+            font-size: 1rem;
+            line-height: 19px;
+            color: #545454; }
+        body main .content nav .title-of-icon {
+          display: flex;
+          align-items: center; }
+          body main .content nav .title-of-icon .incompletettask, body main .content nav .title-of-icon .completettask {
+            font-size: 1.2rem;
+            line-height: 19px;
+            margin-right: 32px; }
+            body main .content nav .title-of-icon .incompletettask .active, body main .content nav .title-of-icon .completettask .active {
+              color: #457BCF;
+              font-weight: 900; }
+      body main .content .todo-list .todo-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 32px;
+        border-bottom: 1px solid #ebebeb; }
+        body main .content .todo-list .todo-item .left-section {
+          display: flex;
+          align-items: center; }
+          body main .content .todo-list .todo-item .left-section .basis {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px; }
+          body main .content .todo-list .todo-item .left-section .disable {
+            border: 1px solid #828282; }
+          body main .content .todo-list .todo-item .left-section .active {
+            background: #3EF520; }
+            body main .content .todo-list .todo-item .left-section .active ~ .subtitle {
+              text-decoration: line-through;
+              text-decoration-color: #828282; }
+          body main .content .todo-list .todo-item .left-section .subtitle {
+            margin-left: 9px;
+            font-size: 1rem; }
+        body main .content .todo-list .todo-item .right-section svg {
+          margin-right: 30px; }
+  body .add-button {
+    position: fixed;
+    width: 56px;
+    height: 56px;
+    bottom: 17px;
+    right: 15%;
+    background: #609FFF;
+    border-radius: 28px;
+    border: #609FFF; }
+#incompletettask.active,
+#completettask.active
+{
+  color: #457BCF;
+  font-weight: 900
+}
+/*# sourceMappingURL=main.css.map */

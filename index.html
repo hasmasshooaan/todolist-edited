@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>TodoList</title>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="heading">My Todo List</h1>
+    </nav>
+    <main>
+        <div>
+            <div class="content container">
+               <nav>
+                    <div class="Present">
+                        <span class="day-time"></span><span class="month-time"></span><span class="year-time"></span>
+                    </div>
+                    <div class="title-of-icon">
+                        <span class="incompletettask active" id="incompletettask">incompletettask</span>
+                        <span class="completettask disable" id="completettask">completettask</span>
+                    </div>
+                </nav>
+                <div class="todo-list">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <button class="add-button" id="myAddBtn">
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.71697 4.37305H10.6818V6.08203H6.71697V10.5742H4.90056V6.08203H0.935717V4.37305H4.90056V0.222656H6.71697V4.37305Z" fill="white"/>
+        </svg>       
+    </button>
+    <div id="myAddModal" class="modal">
+        <div class="modal-content">
+            <h2>new Todo</h2>
+            <p>please write content of todo in input below</p>
+            <input type="text" placeholder="do something!">
+            <div class="btn-group">
+                <button class="Cancel" id="close">Cancel</button>
+                <button class="add">Add</button>
+            </div>
+        </div>
+    </div>
+    <div id="myEditModal" class="modal">
+        <div class="modal-content">
+            <h2>Edit Todo</h2>
+            <p>please write content of todo in input below</p>
+            <input type="text" placeholder="do something!">
+            <div class="btn-group">
+                <button class="Cancel" id="close">Cancel</button>
+                <button class="add" id="EditBtn">Edit</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script/script.js"></script>
+    <script src="./script/addmodel.js"></script>
+    <script src="./script/editmodel.js"></script>
+</body>
+</html>
